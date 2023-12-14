@@ -3,6 +3,7 @@ function getWeather() {
     const cityInput = document.getElementById("cityInput");
     const weatherInfo = document.getElementById("weatherInfo");
 
+
     if (cityInput.value.trim() === "") {
         alert("Please enter a city name.");
         return;
@@ -23,6 +24,12 @@ function getWeather() {
                             <p>Description: ${description}</p>`;
 
                 weatherInfo.innerHTML = resultHTML;
+                const currentDate = new Date().toLocaleDateString();
+                const currentTime = new Date().toLocaleTimeString();
+                const dateTimeHTML = `<p>Current Date: ${currentDate}</p>
+                              <p>Current Time: ${currentTime}</p>`;
+
+                dateTimeContainer.innerHTML = dateTimeHTML;
             }
         })
         .catch(error => {
