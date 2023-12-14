@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+<header>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+        <a class="navbar-brand" href="#">Weather App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#currentWeather">Current Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pastWeather">Past Weather</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-5" id="home">
+    <h1 class="text-center mb-4">Weather App</h1>
+    <div class="weather-container">
+        <div class="form-group">
+            <label for="cityInput">Enter City:</label>
+            <input type="text" class="form-control" id="cityInput" placeholder="Enter city name">
+        </div>
+        <button class="btn btn-primary" onclick="getWeather()">Get Current Weather</button>
+        <div id="currentWeatherInfo" class="mt-4">
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5" id="currentWeather">
+    <h2 class="text-center mb-4">Current Weather</h2>
+    <div id="weatherInfo">
+        <p>Current Temperature: 25 &#8451;</p>
+        <p>Description: Clear sky</p>
+    </div>
+</div>
+
+<div class="container mt-5" id="pastWeather">
+    <h2 class="text-center mb-4">Past Weather</h2>
+    <div class="form-group">
+        <label for="dateInput">Select Date:</label>
+        <input type="date" class="form-control" id="dateInput">
+    </div>
+    <button class="btn btn-primary" onclick="getPastWeather()">Get Past Weather</button>
+    <div id="pastWeatherInfo" class="mt-4">
+        <!-- Placeholder text for past weather -->
+        <p>This is static as the API is paid for past weather information.</p>
+        <p>Past Temperature: 20 &#8451;</p>
+        <p>Description: Cloudy</p>
+    </div>
+</div>
+
+<div class="container mt-5" id="about">
+    <h2 class="text-center mb-4">About Us</h2>
+    <div id="aboutUsInfo">
+        <p>Welcome to our Weather App! We are passionate about providing accurate and timely weather information to help you plan your day. Our team is dedicated to delivering a user-friendly experience for accessing both current and past weather data. Feel free to explore and stay informed!</p>
+    </div>
+</div>
+
+<div class="container mt-5" id="socialMedia">
+    <h2 class="text-center mb-4">Follow Us on Social Media</h2>
+    <div class="social-icons text-center">
+        <!-- Replace the '#' with your actual social media links -->
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- Add more social media links as needed -->
+    </div>
+</div>
+
+
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Weather App</p>
+</footer>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
